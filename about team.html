@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(90deg, #EA4492 0%, #428CD4 50%, #041B2D 100%);
+    justify-content: center;
+    align-items: center;
+}
+html{
+    font-size: calc(60% + 0.8vmin);
+}
+
+nav{
+    background-image: linear-gradient(90deg,#47152c1d 0%, #295988 50%, #03121d 100%);
+    padding: 15px 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+}
+nav a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.7rem;
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+nav a:hover{
+    color: rgb(136, 136, 136);
+    font-size: 2.0rem;
+    transition: .4s;
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0),rgb(255, 187, 0),rgb(251, 255, 0),rgb(60, 255, 0),rgb(0, 204, 255),rgb(0, 119, 255),rgb(234, 0, 255));
+    bottom: -10px;
+    left:  50%;
+    transform:  translate(-50%);
+    border-radius: 25px;
+    transition: .4s;
+}
+nav a:hover:after{
+    width: 50%;
+    opacity: 1;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+.menu li{
+    white-space: nowrap;
+}
+
+@media all and (max-width: 900px){
+.item{
+    display: none;
+}
+.item.active{
+    display: block;
+}
+nav{
+    white-space: nowrap;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    text-decoration: none;
+}
+.item.button{
+     width: auto;
+     display: block;   
+    }
+}
+@media all and (min-width: 900px){
+    .item{
+    display: flex;
+}
+    .toggle{
+    display: none;
+    }
+}
+.logo{
+    margin-left: 20px;
+}
+
+    .cj{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        background-color: rgb(46, 46, 46);
+        margin-left: 200px;
+        margin-right: 200px;
+        padding-top: 80px;
+    }
+    .cj2{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(46, 46, 46);
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 80px;
+    }
+    .photo{
+        margin: 0;
+        margin-top: 20px;
+    }
+    .text1 ,.text2,.text3{
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    img{
+        border-radius: 200px;
+        border: solid 2px black;
+    stroke: #000000;
+    }
+@media all and (max-width: 1600px){
+    .cj{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .cj2{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .text2,.text3{
+        color: #fff;
+        font-size: 1.8rem;
+    }
+    #facebook,#instagram,#phone,#twitter{
+    font-size: 3rem;
+    padding: 1px 1px;
+    margin-top: 20px ;
+    margin-right: 10px;
+    height: 80px;
+    text-align: center;
+    width: 80px;
+    color: #fff;
+    border-radius: 100%;
+    background-color: #000;
+    border-radius: 30px;
+    text-shadow: 0px 0px 50px #0072ff,
+                0px 0px 100px #0072ff,
+                0px 0px 100px #0072ff,
+                0px 0px 100px #0072ff;
+    animation: animate 3s infinite;
+}
+}
+.head{
+    color: #fff;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 100px;
+    background-color: rgb(46, 46, 46);
+}
+.logo a{
+    color: #86E3CE;
+}
+.s1 a{
+    color: #CCABD8;
+}
+.s2 a{
+    color: #FA897B;
+}
+.s3 a{
+    color: #FFDD94;
+}
+.s4 a{
+    color: #D0E6A5;
+}
+.toggle a{
+    color: #febbc8;
+}
+#facebook,#instagram,#phone,#twitter{
+    font-size: 3rem;
+    padding: 1px 1px;
+    margin-top: 20px ;
+    margin-right: 10px;
+    height: 70px;
+    text-align: center;
+    width: 80px;
+    color: #fff;
+    border-radius: 100%;
+    background-color: rgb(46, 46, 46);
+    border-radius: 30px;
+    text-shadow: 0px 0px 50px #0072ff,
+                0px 0px 100px #0072ff,
+                0px 0px 100px #0072ff,
+                0px 0px 100px #0072ff;
+    animation: animate 3s infinite;
+}
+#facebook:hover,#instagram:hover,#phone:hover,#twitter:hover{
+    font-size: 3.5rem;
+    transition: .2s;
+}
+@keyframes animate{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(36deg);
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="main">
+                <nav>
+                    <div class="logo">
+                        <a><a href="http://localhost/PROJECT/Index.html/home.html">Biology</a></a>
+                    </div>
+                    <ul>
+                        <div class="s1"><li class="item"><a href="http://localhost/PROJECT/Index.html/index.html">การสืบพันธ์</a></li></div>
+                        <div class="s2"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B8%BABrain.html">สมอง</a></li></div>
+                        <div class="s3"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B9%8CNerve.html">เส้นประสาท</a></li></div>
+                        <div class="s4"><li class="item"><a href="http://localhost/PROJECT/Index.html/about%20team.html">about us</a></li></div>
+                    <li class="toggle"><a href="#">Menu</a></li>
+                </ul>
+                </nav>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="script.js"></script>
+        </div>
+        <div class="head"><h2>BIOLOGY TEAM</h2></div>
+        <div class="cj">
+            <div class="photo">
+                <img src="TA.JPG"  width="250" height="250" >
+            </div>
+            <div class="text1">Mr.TEERAPATH USUPAHP 
+                <br>Number:17 
+                <br>Numberphone: xxxxxx
+                <br>@gmail: xxxxxx
+                <br><div class="fa fa-facebook" id="facebook"></div>
+                <div class="fa fa-instagram" id="instagram"></div>
+                <div class="fa fa-phone" id="phone"></div>
+                <div class="fa fa-twitter" id="twitter"></div>
+            </div>
+            <div class="photo">
+                <img src="fiw.jpg"  width="250" height="250" >
+            </div>
+            <div class="text2">Mr.RATTHAPOOM PUANBOONNAM
+                <br>Number:15
+                <br>Numberphone: xxxxxx
+                <br>@gmail: xxxxxx
+                <br><div class="fa fa-facebook" id="facebook"></div>
+                <div class="fa fa-instagram" id="instagram"></div>
+                <div class="fa fa-phone" id="phone"></div>
+                <div class="fa fa-twitter" id="twitter"></div>
+            </div>
+        </div>
+        <div class="cj2">
+            <div class="photo">
+                <img src="ken.jpg"  width="250" height="250" >
+            </div>
+            <div class="text3">Mr.PREECHALAT THANAPAKIT
+                <br>Number:8 
+                <br>Numberphone: xxxxxx
+                <br>@gmail: xxxxxx
+                <br><div class="fa fa-facebook" id="facebook"></div>
+                <div class="fa fa-instagram" id="instagram"></div>
+                <div class="fa fa-phone" id="phone"></div>
+                <div class="fa fa-twitter" id="twitter"></div>
+            </div>
+</body>
+</html>

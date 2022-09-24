@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมอง</title>
+    <style>
+        *{
+    padding: 0;
+}
+body{
+    background: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+}
+html{
+    font-size: calc(60% + 0.8vmin);
+}
+
+nav{
+    background-image: linear-gradient(to top, #000000,#1a1a1a,#000000);
+    padding: 15px 10px;
+    border-radius: 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    
+}
+nav a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.7rem;
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+}
+nav a:hover{
+    color: rgb(136, 136, 136);
+    font-size: 2.0rem;
+    transition: .4s;
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to right, #000000,#cf94ff,#000000);
+    bottom: -10px;
+    left:  50%;
+    transform:  translate(-50%);
+    border-radius: 25px;
+    transition: .4s;
+    border-radius: 50%;
+}
+nav a:hover:after{
+    width: 50%;
+    opacity: 1;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+.menu li{
+    white-space: nowrap;
+}
+
+@media all and (max-width: 900px){
+.item{
+    display: none;
+}
+.item.active{
+    display: block;
+}
+nav{
+    white-space: nowrap;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    text-decoration: none;
+}
+.item.button{
+     width: auto;
+     display: block;   
+    }
+}
+@media all and (min-width: 900px){
+    .item{
+    display: flex;
+}
+    .toggle{
+    display: none;
+    }
+}
+.logo a{
+    margin-left: 20px;
+    color: #fff;
+    text-shadow: 
+    0 0 5px#86E3CE,
+    0 0 10px#86E3CE,
+    0 0 20px#86E3CE,
+    0 0 30px#86E3CE;
+}
+.g1 a{
+    color: #fff ;
+    text-shadow: 
+    0 0 5px#CCABD8,
+    0 0 10px#CCABD8,
+    0 0 20px#CCABD8,
+    0 0 30px#CCABD8;
+}
+.g2 a{
+    color: #fff ;
+    text-shadow: 
+    0 0 5px#FFDD94,
+    0 0 10px#FFDD94,
+    0 0 20px#FFDD94,
+    0 0 30px#FFDD94;
+}
+.g3 a{
+    color: #fff ;
+    text-shadow: 
+    0 0 5px#FA897B,
+    0 0 10px#FA897B,
+    0 0 20px#FA897B,
+    0 0 30px#FA897B;
+}
+.g4 a{
+    color: #fff ;
+    text-shadow: 
+    0 0 5px#d1a7ff,
+    0 0 10px#d1a7ff,
+    0 0 20px#d1a7ff,
+    0 0 30px#d1a7ff;
+}
+.g5 a{
+    color: #fff ;
+    text-shadow: 
+    0 0 5px#9000ff,
+    0 0 10px#9000ff,
+    0 0 20px#9000ff,
+    0 0 30px#9000ff;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.picture img{
+    display: flex;
+    height: 600px;
+    border-radius: 30%;
+    margin-top: 20px;
+}
+.picture img:hover{
+    background-color: white;
+    transition: .8s;
+}
+.topic{
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    margin-left:10px ;
+    margin-top: 50px;
+    justify-content: center;
+}
+.text{
+    display: flex;
+    color: rgb(0, 0, 0);
+    margin-left:10px ;
+    padding: auto;
+    height: 200px;
+}
+.text:hover{
+    color: rgb(255, 255, 255);
+    transition: .8s;
+    text-shadow: 
+    0 0 5px#9000ff,
+    0 0 10px#9000ff,
+    0 0 20px#9000ff,
+    0 0 30px#9000ff;
+}
+@media all and (max-width: 1400px){
+    .content{
+    display: block;
+    justify-content: center;
+}
+.picture{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.picture img{
+    display: flex;
+    height: 600px;
+    border-radius: 30%;
+    margin-top: 20px;
+}
+    .topic{
+    display: block;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left:10px ;
+    margin-top: 50px;
+    text-align: center;
+}
+.text{
+    display: flex;
+    color: rgb(255, 255, 255);
+    margin-left:10px ;
+    padding: auto;
+    height: 200px;
+    text-align: center;
+    text-shadow: 
+    0 0 5px#9000ff,
+    0 0 10px#9000ff,
+    0 0 20px#9000ff,
+    0 0 30px#9000ff;
+    justify-content: center;
+}
+}
+h1{
+    font-size: 4.5rem;
+}
+h3{
+    font-size: 2.0rem;
+}
+.braintype{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.braintype p{
+    font-size: 1.5rem;
+}
+.braintype h3{
+    font-size: 2.0rem;
+}
+.po1 ,.po2{
+    height: 500px;
+    width: 800px;
+    margin: 100px;
+    margin-top: 400px;
+}
+.po1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 
+    0 0 5px#406774,
+    0 0 10px#0081ad,
+    0 0 20px#0081ad,
+    0 0 30px#0081ad;
+}
+.po2 {
+    display: flex;
+    justify-content: flex-end;
+    height: 500px;
+    width: 500px;
+}
+.po2 img{
+    border-radius: 50%;
+}
+.po3 ,.po4 ,.po5 ,.po6{
+    margin: 100px;
+}
+.po3 img{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+.po4 {
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 
+    0 0 5px#73a08a,
+    0 0 10px#73a08a,
+    0 0 20px#73a08a,
+    0 0 30px#73a08a;
+    text-align: end;
+}
+.po5{
+    height: 500px;
+    width: 800px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 
+    0 0 5px#f0c264,
+    0 0 10px#f0c264,
+    0 0 20px#f0c264,
+    0 0 30px#f0c264;
+}
+.po6{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+@media all and (max-width: 1400px){
+    .braintype{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.braintype p{
+    font-size: 1.5rem;
+}
+.braintype h3{
+    font-size: 2.0rem;
+}
+.po1 ,.po2{
+    height: 500px;
+    width: 800px;
+    margin: 10px;
+    margin-top: 40px;
+}
+.po3 ,.po4 ,.po5 ,.po6{
+    margin: 10px;
+}
+.po1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 
+    0 0 5px#0081ad,
+    0 0 10px#0081ad,
+    0 0 20px#0081ad,
+    0 0 30px#0081ad;
+    order: 1;
+}
+.po2 {
+    height: 500px;
+    width: 500px;
+    order: 2;
+}
+.po2 img{
+    border-radius: 50%;
+}
+.po3{
+    display: flex;
+    order: 4;
+    justify-content: flex-end;
+}
+.po3 img{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+}
+.po4 {
+    height: 500px;
+    width: auto;
+    text-shadow: 
+    0 0 5px#73a08a,
+    0 0 10px#73a08a,
+    0 0 20px#73a08a,
+    0 0 30px#73a08a;
+    order: 3;
+}
+.po5{
+    height: 500px;
+    width: 800px;
+    text-shadow: 
+    0 0 5px#f0c264,
+    0 0 10px#f0c264,
+    0 0 20px#f0c264,
+    0 0 30px#f0c264;
+    order: 5;
+}
+.po6{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    order: 6;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <a><a href="http://localhost/PROJECT/Index.html/home.html">Biology</a></a>
+            </div>
+            <ul>
+                <div class="g1"><li class="item"><a href="http://localhost/PROJECT/Index.html/index.html">การสืบพันธ์</a></li></div>
+                <div class="g2"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B8%BABrain.html">สมอง</a></li></div>
+                <div class="g3"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B9%8CNerve.html">เส้นประสาท</a></li></div>
+                <div class="g4"><li class="item"><a href="http://localhost/PROJECT/Index.html/about%20team.html">about us</a></li></div>
+                <div class="g5"><li class="toggle"><a href="#">Menu</a></li>
+            </ul>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+    <div class="content">
+        <div class="picture"><img src="brain.png"></div>
+        <div class="conner">
+            <div class="topic"><h1>สมองคืออะไร? What is brain?</h1></div>
+            <div class="text"><h3>สมอง คืออวัยวะสำคัญในสัตว์หลายชนิดตามลักษณะทางกายวิภาค<br>จัดว่าเป็นส่วนกลางของระบบประสาท
+            </h3></div>
+        </div>
+
+    </div>
+    <div class="braintype">
+        <div class="po1"><h3>1. สมองส่วนหน้า ( Forebrain )</h3>
+            <p>1.ออลเฟกทอรีบัลบ์ ( Olfactory Bulb ) หน้าที่หลักในการดมกลิ่น สมองส่วนนี้ไม่มีการพัฒนามากนักในมนุษย์
+                <br>2.ซีรีบรัม ( Cerebrum ) นี่คือส่วนสำคัญที่เกี่ยวกับการเรียนรู้และการเพิ่มพูนความสามารถต่างๆ เป็นศูนย์กลางการทำงานด้านประสาทสัมผัสของร่างกาย ส่วนนี้ยังแยกย่อยได้อีก 4 ส่วนคือ
+                <br>3.ทาลามัส ( Thalamus ) เป็นศูนย์รวมของกระแสประสาทที่ผ่านเข้าออกทั้งหมด
+                <br>4.ไฮโปทาลามัส ( Hypothalamus ) ศูนย์กลางของระบบประสาทอัตโนวัติ สร้างฮอร์โมนเพื่อควบคุมการผลิตฮอร์โมนจากต่อมใต้สมองอีกที การปรับอุณหภูมิของร่ายกาย อารมณ์ ความรู้สึก</p></div>
+        <div class="po2"><img src="https://my.clevelandclinic.org/-/scassets/images/org/health/articles/23083-cerebrum" width="500px" height="500px">
+        </div>
+    </div>
+    <div class="braintype">
+        <div class="po3"><img src="https://static.trueplookpanya.com/tppy/member/m_567500_570000/569760/cms/images/shutterstock_1164871894.jpg" width="500px" height="500px"><p></p></div>
+        <div class="po4"><h3>2. สมองส่วนกลาง ( Midbrain )</h3>
+            <p>ส่วนนี้ต่อเนื่องมาจากสมองส่วนหน้า และมี ออพติกโลบ ( Optic Lobe ) เป็นส่วนประกอบที่สำคัญที่สุด ทำหน้าที่ควบคุมการเคลื่อนไหวของนัยย์ตาและการเปิดปิดของรูม่านตาด้วย</p>
+        </div>
+    </div>
+    <div class="braintype">
+        <div class="po5"><h3>3. สมองส่วนท้าย ( Hindbrain )</h3>
+            <p>ส่วนท้ายสุดของสมองมีองค์ประกอบสำคัญอยู่ 3 ส่วนดังนี้
+            <br>1.พอนส์ ( Pons ) ควบคุมการเคลื่อนไหวของกล้ามเนื้อใบหน้า เช่น การเคี้ยว การหลั่งน้ำลาย เป็นต้น</li>
+            <br>2.เมดัลลา ( Medulla ) ทางผ่านของกระแสประสาทจากสมองสู่ไขสันหลัง</li>
+            <br>3.ซีรีเบลลัม ( Cerebellum ) ตรงนี้คือส่วนที่เราเรียกกันว่า “ สมองน้อย ” เป็นส่วนหลักในการประมวลการรับรู้และควบคุมการสั่งงานของสมอง</p></li>
+        </div>
+        <div class="po6"><img src="https://sirikwanmay.files.wordpress.com/2013/01/image.jpg" width="500px" height="500px"></div>
+    </div>
+
+</body>
+</html>

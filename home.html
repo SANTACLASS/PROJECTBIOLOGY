@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      * {
+        padding: 0;
+      }
+      body {
+        background: #aaaaaa;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+      html {
+        font-size: calc(60% + 0.8vmin);
+      }
+
+      nav {
+        background-image: linear-gradient(
+          90deg,
+          #03121d 0%,
+          #162b41 50%,
+          #47152c 100%
+        );
+        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        position: relative;
+      }
+      nav a {
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.7rem;
+        font-family: arial;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: relative;
+        color: rgb(0, 0, 0);
+      }
+      nav a:hover {
+        color: rgb(136, 136, 136);
+        font-size: 2rem;
+        transition: 0.4s;
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 4px;
+        background-image: linear-gradient(
+          to right,
+          rgb(255, 0, 0),
+          rgb(255, 187, 0),
+          rgb(251, 255, 0),
+          rgb(60, 255, 0),
+          rgb(0, 204, 255),
+          rgb(0, 119, 255),
+          rgb(234, 0, 255)
+        );
+        bottom: -10px;
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 25px;
+        transition: 0.4s;
+      }
+      nav a:hover:after {
+        width: 50%;
+        opacity: 1;
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+      .menu li {
+        white-space: nowrap;
+      }
+
+      @media all and (max-width: 900px) {
+        .item {
+          display: none;
+        }
+        .item.active {
+          display: block;
+        }
+        nav {
+          white-space: nowrap;
+          flex-wrap: wrap;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .toggle {
+          text-decoration: none;
+        }
+        .item.button {
+          width: auto;
+          display: block;
+        }
+      }
+      @media all and (min-width: 900px) {
+        .item {
+          display: flex;
+        }
+        .toggle {
+          display: none;
+        }
+      }
+      .logo {
+        margin-left: 20px;
+      }
+
+      .cj {
+        display: flex;
+        position: relative;
+        padding: 420px;
+        align-items: center;
+        justify-content: center;
+      }
+      .photo {
+        margin: 0;
+        margin-top: 20px;
+      }
+      .text1,
+      .text2 {
+        color: #dea839;
+        font-size: 1.5rem;
+        text-shadow: 3px 3px 3px #55431e;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+      img {
+        border-radius: 200px;
+        border: solid 2px black;
+        stroke: #000000;
+      }
+      @media all and (max-width: 2000px) {
+        .cj {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+        }
+        .text2 {
+          margin-left: 100px;
+        }
+      }
+      .super {
+        display: flex;
+        margin: 0;
+        height: 520px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        z-index: 2;
+      }
+
+      .super h1 {
+        font-size: 6rem;
+        margin: 0;
+      }
+      .super p {
+        font-size: 1.3rem;
+      }
+      .logo a {
+        color: #86e3ce;
+      }
+      .s1 a {
+        color: #d0e6a5;
+      }
+      .s2 a {
+        color: #ffdd94;
+      }
+      .s3 a {
+        color: #fa897b;
+      }
+      .s4 a {
+        color: #ccabd8;
+      }
+      .toggle a {
+        color: #febbc8;
+      }
+      .sen {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        align-items: center;
+        height: 665px;
+        width: auto;
+        z-index: 1;
+        margin-left: 200px;
+        margin-right: 200px;
+        background-color: #fff;
+        border-radius: 20%;
+      }
+      @media all and (max-width: 1400px) {
+        .sen {
+          display: grid;
+          grid-template-columns: 1fr;
+          text-align: center;
+          align-items: center;
+          height: 100%;
+          width: auto;
+          z-index: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+          background-color: #fff;
+          border-radius: 20%;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        .sen,
+        .p1,
+        .p2,
+        .p3 {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .sen h3 {
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      .sen p {
+        font-size: 1.5rem;
+        border: 50px;
+      }
+      .sen .p1 {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .sen .p1 img {
+        border-radius: 100%;
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+      }
+      .sen .p1 img:hover {
+        transition: 0.2s;
+        box-shadow: 0 0 5px #264d10, 0 0 10px #499320, 0 0 20px #80d936,
+          0 0 30px #6cec00;
+      }
+      .sen .p2 {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .sen .p2 img {
+        border-radius: 100%;
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+      }
+      .sen .p2 img:hover {
+        transition: 0.2s;
+        box-shadow: 0 0 5px #00abec, 0 0 10px #00abec, 0 0 20px #8600ec,
+          0 0 30px #8600ec;
+      }
+      .sen .p3 {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+      }
+      .sen .p3 img {
+        border-radius: 100%;
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+      }
+      .sen .p3 img:hover {
+        transition: 0.2s;
+        box-shadow: 0 0 5px #ecb600, 0 0 10px #ecb600, 0 0 20px #ecb600,
+          0 0 30px #ecb600;
+      }
+      .Human {
+        background-image: linear-gradient(
+          90deg,
+          #041b2d 0%,
+          #428cd4 50%,
+          #ea4492
+        );
+        margin: 0;
+        height: 1213px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- menu -->
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <a
+            ><a href="http://localhost/PROJECT/Index.html/home.html"
+              >Biology</a
+            ></a
+          >
+        </div>
+        <ul>
+          <div class="s1">
+            <li class="item">
+              <a href="http://localhost/PROJECT/Index.html/index.html"
+                >การสืบพันธ์</a
+              >
+            </li>
+          </div>
+          <div class="s2">
+            <li class="item">
+              <a href="http://localhost/PROJECT/Index.html/%E0%B8%BABrain.html"
+                >สมอง</a
+              >
+            </li>
+          </div>
+          <div class="s3">
+            <li class="item">
+              <a href="http://localhost/PROJECT/Index.html/%E0%B9%8CNerve.html"
+                >เส้นประสาท</a
+              >
+            </li>
+          </div>
+          <div class="s4">
+            <li class="item">
+              <a href="http://localhost/PROJECT/Index.html/about%20team.html"
+                >about us</a
+              >
+            </li>
+          </div>
+          <li class="toggle"><a href="#">Menu</a></li>
+        </ul>
+      </nav>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="script.js"></script>
+    </div>
+    <!-- ด้านบน -->
+    <div class="Human">
+      <div class="super">
+        <h1>Biology</h1>
+        <p>
+          ชีววิทยา (Biology) มาจากภาษากรีก คือคำว่า "Bios" แปลว่า สิ่งมีชีวิต
+          และ "Logos" แปลว่า วิชา หรือการศึกษาอย่างมีเหตุผล
+        </p>
+      </div>
+      <div class="sen">
+        <div class="p1">
+          <a href="http://localhost/PROJECT/Index.html/index.html"
+            ><img
+              src="https://cdn1.productnation.co/stg/sites/6/5d497870c0cd0.jpeg"
+              width="500px"
+              height="500px"
+          /></a>
+          <h3>การสืบพันธ์ุ</h3>
+          <p>
+            เนื้อหาการสืบพันธ์ุหมายถึงอะไร?<br />การสืบพันธฺ์มีทั้งหมดกี่ประเภท?<br />และมีอะไรบ้าง?
+          </p>
+        </div>
+        <div class="p2">
+          <a href="http://localhost/PROJECT/Index.html/%E0%B8%BABrain.html"
+            ><img
+              src="https://my.clevelandclinic.org/-/scassets/images/org/health/articles/23083-cerebrum"
+              width="500px"
+              height="500px"
+          /></a>
+          <h3>สมอง</h3>
+          <p>
+            เนื้อหาเกี่ยวกับความหมายของสมอง?<br />ส่วนประกอบของสมองมีอะไรบ้าง?<br />มีทั้งหมดกี่ส่วน?
+          </p>
+        </div>
+        <div class="p3">
+          <a href="http://localhost/PROJECT/Index.html/%E0%B9%8CNerve.html"
+            ><img
+              src="https://www.doctor.or.th/sites/default/files/212-008.jpg"
+              width="500px"
+              height="500px"
+          /></a>
+          <h3>ระบบประสาท</h3>
+          <p>
+            เนื้อหาเกี่ยวกับระบบประสาทหมายถึงอะไร?<br />ส่วนประกอบของระบบประสาท?<br />การทำงานของระบบประสาท
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เส้นประสาท</title>
+    <style>
+*{
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    background-size: cover;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+html{
+    font-size: calc(60% + 0.8vmin);
+}
+
+nav{
+    background-image: linear-gradient(90deg, #03121d 0%, #162b41 50%, #47152c 100%);
+    padding: 15px 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    
+}
+nav a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.8rem;
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+nav a:hover{
+    color: rgb(136, 136, 136);
+    font-size: 2.0rem;
+    transition: .4s;
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-image: linear-gradient(to right, rgb(255, 0, 0),rgb(255, 187, 0),rgb(251, 255, 0),rgb(60, 255, 0),rgb(0, 204, 255),rgb(0, 119, 255),rgb(234, 0, 255));
+    bottom: -10px;
+    left:  50%;
+    transform:  translate(-50%);
+    border-radius: 25px;
+    transition: .4s;
+}
+nav a:hover:after{
+    width: 50%;
+    opacity: 1;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+.menu li{
+    white-space: nowrap;
+}
+
+@media all and (max-width: 900px){
+.item{
+    display: none;
+}
+.item.active{
+    display: block;
+}
+nav{
+    white-space: nowrap;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    text-decoration: none;
+}
+.item.button{
+     width: auto;
+     display: block;   
+    }
+}
+@media all and (min-width: 900px){
+    .item{
+    display: flex;
+}
+    .toggle{
+    display: none;
+    }
+}
+.logo{
+    margin-left: 20px;
+}
+
+    .cj{
+        display: flex;
+        position: relative;
+        padding: 420px;
+        align-items: center;
+        justify-content: center;
+    }
+@media all and (max-width: 2000px){
+    .cj{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .text2{
+        margin-left: 100px;
+    }
+}
+.super{
+    display: flex;
+    margin: 0;
+    height: 520px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    z-index: 2;
+}
+
+.super h1{
+    font-size: 6rem;
+    margin: 0;
+}
+.super p {
+    font-size: 1.3rem;
+}
+.logo a{
+    color: #86E3CE;
+}
+.s1 a{
+    color: #D0E6A5;
+}
+.s2 a{
+    color: #FFDD94;
+}
+.s3 a{
+    color: #FA897B;
+}
+.s4 a{
+    color: #CCABD8;
+}
+.toggle a{
+    color: #febbc8;
+}
+.TT{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+.topic{
+    font-size: 4rem;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    color: #2d1b00;
+    margin-top: 100px;
+}
+.picture{
+    text-align: center;
+    align-items: center;
+    margin-top: 100px;
+    width: auto;
+    height: auto;
+}
+.picture img{
+    border: solid 3px #533200;
+}
+.topic1{
+    background-color: #533200;
+    padding: 3px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 50%
+}
+p{
+    margin: 0;
+}
+.topic2{
+    font-size: 1.5rem;
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.superdog{
+    background-image: linear-gradient(90deg, #03121d 0%, #162b41 50%, #47152c 100%);
+}
+.superpicture{
+    text-align: center;
+}
+.footer{
+    display: flex;
+    height: 300px;
+    justify-content: center;
+}
+.g1,.g2,.g3,.g4,.g5{
+    color: #fff;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.g1{
+    color: #ff0000;
+}
+.g2{
+    color: #00b2ff;
+}
+.g3{
+    color: #007cff;
+}
+.g4{
+    color: #27cf00;
+}
+.g5{
+    color: #9c00ff;
+}
+.superpicture p{
+    color: #fff;
+    font-size: 2rem;
+    margin: 20px;
+}
+@media all and (max-width: 1000px){
+    .TT{
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+.footer{
+    display: block;
+    height: auto;
+    justify-content: center;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <a><a href="http://localhost/PROJECT/Index.html/home.html">Biology</a></a>
+            </div>
+            <ul>
+                <div class="s1"><li class="item"><a href="http://localhost/PROJECT/Index.html/index.html">การสืบพันธ์</a></li></div>
+                <div class="s2"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B8%BABrain.html">สมอง</a></li></div>
+                <div class="s3"><li class="item"><a href="http://localhost/PROJECT/Index.html/%E0%B9%8CNerve.html">เส้นประสาท</a></li></div>
+                <div class="s4"><li class="item"><a href="http://localhost/PROJECT/Index.html/about%20team.html">about us</a></li></div>
+                <li class="toggle"><a href="#">Menu</a></li>
+            </ul>
+    </nav>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+    <div class="head">
+        <div class="TT">
+            <div class="topic"><p>NERVE SYSTEM <br>ระบบประสาท</p>
+                <div class="topic1"></div>
+                <div class="topic2"><p>เส้นประสาทเปรียบเทียบได้กับระบบสายไฟฟ้าหรือโทรศัพท์ ที่ประกอบด้วยใยประสาทเส้นเล็กๆ รวมกันเป็นมัดใหญ่ ออกจากสมองไปสู่ส่วนต่างๆของร่างกาย ทำให้มีการติดต่อกันได้</p></div>
+            </div>
+            <div class="picture"><img src="https://www.doctor.or.th/sites/default/files/212-008.jpg" ></div>
+        </div>
+    </div>
+    <div class="superdog">
+        <div class="superpicture"><p>การทำงานของระบบประสาท</p><img src="https://quizizz.com/media/resource/gs/quizizz-media/quizzes/4f2490bf-174d-4dfd-b21e-faacdf8969d4?w=90&h=90"></div>
+        <div class="footer">
+            <div class="g1">    
+                <p>1.Resting stage ระยะพัก
+                    <br>Na Chanel : ปิดแบบพร้อมใช้งาน
+                    <br>K Chanel : ปิด
+                    <br>membrane potential :-70mV
+                </p>
+            </div>
+            <div class="g2">    
+                <p>2.Depolarization ช่วงแรก
+                    <br>Na Chanel : เปิดบางส่วน Na เข้าเซล
+                    <br>K Chanel : ปิด
+                    <br>membrane potential :-55mV
+                </p>
+            </div>
+            <div class="g3">    
+                <p>3.Depolarization ช่วงหลัง
+                    <br>Na Chanel : เปิด Na เข้าเซลมาก
+                    <br>K Chanel : ปิด
+                    <br>membrane potential : +30mV
+                </p>
+            </div>
+            <div class="g4">    
+                <p>4.Repolarization ช่วงก่อนสุดท้าย
+                    <br>Na Chanel : ปิด แบบไม่พร้อมใช้งาน
+                    <br>K Chanel : เปิด
+                    <br>membrane potential :-mV
+                </p>
+            </div>
+            <div class="g5">    
+                <p>5.Repolarization ช่วงสุดท้าย
+                    <br>Na Chanel : ปิด แบบพร้อมใช้งาน
+                    <br>K Chanel : เปิด
+                    <br>membrane potential :-75mV
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
